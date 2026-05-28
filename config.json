@@ -1,0 +1,53 @@
+{
+  "check_interval_minutes": 5,
+  "cities": ["istanbul", "ankara", "izmir", "antalya", "gaziantep"],
+  "services": {
+    "tlscontact": {
+      "enabled": true,
+      "centers": [
+        {"name": "Almanya", "url": "https://de.tlscontact.com/tr/IST", "center_code": "IST"},
+        {"name": "Fransa", "url": "https://fr.tlscontact.com/tr/IST", "center_code": "IST"},
+        {"name": "Hollanda", "url": "https://nl.tlscontact.com/tr/IST", "center_code": "IST"},
+        {"name": "Belçika", "url": "https://be.tlscontact.com/tr/IST", "center_code": "IST"},
+        {"name": "UK (TLS)", "url": "https://www.tlscontact.com/uk/tr/", "center_code": "IST"}
+      ]
+    },
+    "vfsglobal": {
+      "enabled": true,
+      "centers": [
+        {"name": "İtalya", "url": "https://www.vfsglobal.com/italy/turkey/schedule-an-appointment.html", "center_code": "IST"},
+        {"name": "İspanya", "url": "https://visa.vfsglobal.com/tur/en/esp/book-an-appointment", "center_code": "IST"},
+        {"name": "Yunanistan", "url": "https://visa.vfsglobal.com/tur/en/grc/book-an-appointment", "center_code": "IST"},
+        {"name": "Kanada", "url": "https://visa.vfsglobal.com/tur/en/can/book-an-appointment", "center_code": "IST"},
+        {"name": "Polonya", "url": "https://visa.vfsglobal.com/tur/en/pol/book-your-appointment", "center_code": "IST"},
+        {"name": "İsviçre", "url": "https://visa.vfsglobal.com/tur/en/che/book-an-appointment", "center_code": "IST"},
+        {"name": "Avusturya", "url": "https://visa.vfsglobal.com/tur/en/aut/book-an-appointment", "center_code": "IST"},
+        {"name": "Portekiz", "url": "https://visa.vfsglobal.com/tur/en/prt/book-an-appointment", "center_code": "IST"},
+        {"name": "Macaristan", "url": "https://visa.vfsglobal.com/tur/en/hun/book-an-appointment", "center_code": "IST"},
+        {"name": "Çekya", "url": "https://visa.vfsglobal.com/tur/en/cze/book-an-appointment", "center_code": "IST"},
+        {"name": "Danimarka", "url": "https://visa.vfsglobal.com/tur/en/dnk/book-an-appointment", "center_code": "IST"},
+        {"name": "İsveç", "url": "https://visa.vfsglobal.com/tur/en/swe/book-an-appointment", "center_code": "IST"},
+        {"name": "Norveç", "url": "https://visa.vfsglobal.com/tur/en/nor/book-an-appointment", "center_code": "IST"},
+        {"name": "Finlandiya", "url": "https://visa.vfsglobal.com/tur/en/fin/book-an-appointment", "center_code": "IST"},
+        {"name": "Avustralya", "url": "https://visa.vfsglobal.com/tur/en/aus/book-an-appointment", "center_code": "IST"},
+        {"name": "Hırvatistan", "url": "https://visa.vfsglobal.com/tur/en/hrv/book-an-appointment", "center_code": "IST"},
+        {"name": "Bulgaristan", "url": "https://visa.vfsglobal.com/tur/en/bgr/book-an-appointment", "center_code": "IST"},
+        {"name": "Romanya", "url": "https://visa.vfsglobal.com/tur/en/rou/book-an-appointment", "center_code": "IST"},
+        {"name": "Malta", "url": "https://visa.vfsglobal.com/tur/en/mlt/book-an-appointment", "center_code": "IST"},
+        {"name": "Slovakya", "url": "https://visa.vfsglobal.com/tur/en/svk/book-an-appointment", "center_code": "IST"},
+        {"name": "Slovenya", "url": "https://visa.vfsglobal.com/tur/en/svn/book-an-appointment", "center_code": "IST"},
+        {"name": "Estonya", "url": "https://visa.vfsglobal.com/tur/en/est/book-an-appointment", "center_code": "IST"},
+        {"name": "Letonya", "url": "https://visa.vfsglobal.com/tur/en/lva/book-an-appointment", "center_code": "IST"},
+        {"name": "Litvanya", "url": "https://visa.vfsglobal.com/tur/en/ltu/book-an-appointment", "center_code": "IST"}
+      ]
+    },
+    "ustraveldocs": {
+      "enabled": false,
+      "username": "",
+      "password": "",
+      "centers": [
+        {"name": "ABD", "url": "https://ais.usvisa-info.com/en-tr/niv", "center_code": "IST"}
+      ]
+    }
+  }
+}
