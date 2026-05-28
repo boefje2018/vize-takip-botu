@@ -23,19 +23,18 @@ jobs:
           pip install playwright
           python -m playwright install chromium
 
-      - name: Create config from secrets
-        run: |
-          echo "${{ secrets.CONFIG_JSON }}" > config.json
+      - name: Write config
+        env:
+          CONFIG_JSON: ${{ secrets.CONFIG_JSON }}
+        run: printf '%s\n' "$CONFIG_JSON" > config.json
 
-      - name: Create .env from secrets
+      - name: Write .env
+        env:
+          TG_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TG_CHAT: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          echo "TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}" > .env
-          echo "TELEGRAM_CHAT_ID=${{ secrets.TELEGRAM_CHAT_ID }}" >> .env
-          echo "SMTP_SERVER=${{ secrets.SMTP_SERVER }}" >> .env
-          echo "SMTP_PORT=${{ secrets.SMTP_PORT }}" >> .env
-          echo "EMAIL_ADDRESS=${{ secrets.EMAIL_ADDRESS }}" >> .env
-          echo "EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}" >> .env
-          echo "EMAIL_TO=${{ secrets.EMAIL_TO }}" >> .env
+          echo "TELEGRAM_BOT_TOKEN=${TG_TOKEN}" > .env
+          echo "TELEGRAM_CHAT_ID=${TG_CHAT}" >> .env
 
       - name: Run visa check
         run: python main.py
