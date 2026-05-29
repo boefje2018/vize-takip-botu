@@ -53,6 +53,10 @@ async def check_all(telegram: TelegramNotifier, email: EmailNotifier):
     new_slots = [r for r in results if r.has_slot]
     errors = [r for r in results if r.error and not r.has_slot]
 
+    status = f"[{timestamp()}] {len(results)} merkez tarandı | "
+    status += f"✅ {len(new_slots)} boş slot | "
+    status += f"⚠ {len(errors)} hata"
+
     if new_slots:
         for result in new_slots:
             alert = format_alert(result)
@@ -60,9 +64,6 @@ async def check_all(telegram: TelegramNotifier, email: EmailNotifier):
             telegram.send(alert)
             email.send(f"Vize Randevusu {result.service} - {result.center}", alert)
 
-    status = f"[{timestamp()}] {len(results)} merkez tarandı | "
-    status += f"✅ {len(new_slots)} boş slot | "
-    status += f"⚠ {len(errors)} hata"
     print(status)
 
     if errors:
